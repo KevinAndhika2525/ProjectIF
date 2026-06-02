@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualisasi Bukittinggi dengan Leaflet</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f0f0f0;
+        }
+        #map {
+            width: 80vw;
+            height: calc(80vw * 2 / 3);
+            max-width: 1200px;
+            max-height: 800px;
+            border: 2px solid #333;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        }
+    </style>
+</head>
+<body>
+    <div id="map"></div>
+
+    <script>
+        var map = L.map('map').setView([-0.305, 100.360], 16);
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        // Marker Menara Jam Gadang
+        var marker = L.marker([-0.305218,100.369508]).addTo(map);
+        marker.bindPopup("<b>Menara Jam Gadang</b>").openPopup();
+
+        // Polygon RAMAYANA Bukittinggi
+        var polygon = L.polygon([
+            [-0.305467,100.368867],
+            [-0.305371,100.368463],
+            [-0.305032,100.368545],
+            [-0.304973,100.368296],
+            [-0.304796,100.368337],
+            [-0.304962,100.368994]
+        ], {
+            color: 'red',
+            fillColor: '#f03',
+            fillOpacity: 0.5
+        }).addTo(map);
+        polygon.bindPopup("<b>RAMAYANA Bukittinggi</b>");
+
+        // Circle Istana Bung Hatta
+        var circle = L.circle([-0.306276,100.368862], {
+            color: 'blue',
+            fillColor: '#3388ff',
+            fillOpacity: 0.3,
+            radius: 40
+        }).addTo(map);
+        circle.bindPopup("<b>Istana Bung Hatta</b>");
+
+        // Polyline
+        var polyline = L.polyline([
+            [-0.305870, 100.367149],
+            [-0.305967, 100.367257],
+            [-0.305960, 100.367634],
+            [-0.305293, 100.367813],
+            [-0.305601, 100.368954],
+            [-0.305220, 100.369043]
+        ], {
+            color: 'green',
+            weight: 3
+        }).addTo(map);
+        polyline.bindPopup("<b>Polyline Route</b>");
+    </script>
+</body>
+</html>

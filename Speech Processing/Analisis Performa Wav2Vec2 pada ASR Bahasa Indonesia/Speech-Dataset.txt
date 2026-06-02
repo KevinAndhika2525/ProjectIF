@@ -1,0 +1,8 @@
+TXT Tugas Akhir Speech Processing
+nama : Kevin Andhika
+nim : 2311532005
+
+link model : Wav2Vec2
+https://huggingface.co/m-salman-a/wav2vec2-xlsr-53-common-voice-indonesian
+
+link dataset : Common Voice 11.0 Id https://huggingface.co/datasets/evanarlian/common_voice_11_0_id_filtered
