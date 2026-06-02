@@ -1,0 +1,163 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: black;
+    font-family: Montserrat;
+}
+@font-face {
+    font-family: Montserrat;
+    src: url("Montserrat-Bold.ttf"); 
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+.home{
+    padding-top: 50px;
+    padding-bottom: 100px;
+    background-color: #1B4A92;
+    background-image: url("tone2.png");
+    background-attachment: scroll;
+    background-position: center;
+    background-size: cover;
+}
+.about{
+    padding-top: 170px;
+    padding-bottom: 180px;
+    background-image: url("bgPattern.png");
+}
+.division{
+    padding-top: 60px;
+    padding-bottom: 70px;
+    background-color: #003789;
+    background-image: url("patterngel2.png");
+    background-attachment: scroll;
+    background-position: center;
+    background-size: cover;
+    color: white;
+}
+.gallery{
+    padding-top: 10px;
+    padding-bottom: 45px;
+    background-image: url("bgPattern2.png");
+    justify-content: center;
+    align-items: center;
+}
+.contact{
+    padding-top: 20px;
+    padding-bottom: 645px;
+    /* background-color: #2C2C2C; */
+    background-image: url("unand.jpeg");   
+    background-attachment: scroll;
+    background-size: cover;
+}
+
+
+.transition{
+    height: 65px;
+    background-color: black;
+}
+
+
+.judul{
+    margin-top: 10px;
+    font-size: 500%;
+    font-weight: bold;
+    font-family: Montserrat;
+    text-align: center;
+    color: white;
+    margin-bottom: 50px;
+}
+.subjudul{
+    background: linear-gradient(90deg, rgba(0,164,255,1) 2%, rgba(2,183,180,1) 37%, rgba(3,187,163,1) 57%, rgba(5,9,130,1) 100%);
+    -webkit-text-stroke: 0.5px rgb(12, 38, 44);
+    color: rgb(0, 0, 0);
+    font-family:Montserrat;
+    font-size: 150%;
+    font-weight: bold;
+    text-align: center;
+    box-shadow: 0 0 20px 20px rgba(0, 0, 0, 0.15);
+}
+.container h2{
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-weight: 900;
+    font-size: 500%;
+}
+.container h1{
+    color: rgb(0, 0, 0);
+    text-align: center;
+    font-weight: 900;
+    font-size: 200%;
+}
+.lefto {
+  background-color: #565656;
+  padding: 20px;
+}
+.righto {
+  background-color: #565656;
+  padding: 20px;
+}
+
+.geser {
+    position: absolute;
+    transition: transform 2s ease;
+    width: 40%;
+    margin-top: 165px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transform: scale(200px);
+    box-shadow: 0 0 20px 20px rgba(0, 0, 0, 0.15);
+    border-radius: 50%;
+}
+.carousel-item h3{
+    color: black;
+    -webkit-text-stroke: 1px rgb(255, 255, 255);
+    font-weight: bold;
+    font-size: 300%;
+}
+.carol{
+    width: 30%;
+    box-shadow: 0 0 20px 20px rgba(0, 0, 0, 0.15);
+    border-radius: 50%;
+}
+.carol2{
+    width: 22%;
+    box-shadow: 0 0 20px 20px rgba(0, 0, 0, 0.15);
+}
+.forum h4{
+    color: white;
+    font-weight: bold;
+    font-size: 200%;
+    text-align: center;
+    margin-top: 20px;
+}
+.linktr{
+    text-decoration: none;
+    color: black;
+}
+.putih{
+    color: white;
+    margin-left: 20px;
+}
+.forum{
+    margin-top: 320px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    border-radius: 16px;
+    background: rgba(44,44,44,0.5);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+}
+
+
+.copyright-section {
+    text-align: center;
+    border-radius: 10px;
+    width: 100%;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    padding:  20px 0px 10px 0px;
+    background-color: #EEEEEE;
+}

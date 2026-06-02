@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEB HIMA</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="bootstrap.min.css" rel="stylesheet">
+    <link href="fontawesome.css" rel="stylesheet">
+    <link href="brands.css" rel="stylesheet">
+    <link href="solid.css" rel="stylesheet">
+</head>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+            const elementX = document.querySelector('.lefto');
+            const elementY = document.querySelector('.righto');
+            const elementA = document.querySelector('.geser');
+
+            elementX.addEventListener('mouseenter', () => {
+                elementA.style.transform = 'translate(100px, -50%)';
+            });
+            elementX.addEventListener('mouseleave', () => {
+                elementA.style.transform = 'translate(-50%, -50%)';
+            });
+
+            elementY.addEventListener('mouseenter', () => {
+                elementA.style.transform = 'translate(-700px, -50%)';
+            });
+            elementY.addEventListener('mouseleave', () => {
+                elementA.style.transform = 'translate(-50%, -50%)';
+            });
+        });
+        document.getElementById('myForm').addEventListener('submit', function(event) {
+            event.preventDefault(); 
+            alert("\nTerima Kasihh!! \nPesan Anda Berhasil Terkirim");
+
+            document.getElementById('email').value = '';
+            document.getElementById('pwd').value = '';
+            document.getElementById('comment').value = '';
+        });
+</script>
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-sm bg-white fixed-top justify-content-end">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="./">
+                <img src="HMIFnav.png" alt="Logo" style="width:80px;">
+            </a>
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#Home"><h4>Beranda</h4></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#About"><h4>Tentang</h4></a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link" href="#Division" data-bs-toggle="dropdown"><h4>Divisi</h4></a>
+                    <ul class="dropdown-menu dropdown-content">
+                    <li><a class="dropdown-item" href="#Division">DPP</a></li>
+                    <li><a class="dropdown-item" href="#Division">Presidium</a></li>
+                    <li><a class="dropdown-item" href="#Division">HRD</a></li>
+                    <li><a class="dropdown-item" href="#Division">Internal</a></li>
+                    <li><a class="dropdown-item" href="#Division">Eksternal</a></li>
+                    <li><a class="dropdown-item" href="#Division">Entrepreneur</a></li>
+                    <li><a class="dropdown-item" href="#Division">Adkesma</a></li>
+                    <li><a class="dropdown-item" href="#Division">Infomed</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#Gallery"><h4>Galeri</h4></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#Contact"><h4>Kontak</h4></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- TRANSITION -->
+    <div id="Home" class="transition"></div>
+    <!-- HOME -->
+    <div class="home">
+        <div class="container">
+            <img src="LogoHMIF.png" class="mx-auto d-block" alt="Logo HMIF" 
+            width="300px" height="auto"> 
+
+            <div class="judul">HIMPUNAN MAHASISWA</div>
+            <div class="subjudul">INFORMATIKA</div> 
+        </div>
+    </div>
+
+    <!-- TRANSITION -->
+    <div id="About" class="transition"></div>
+    <!-- ABOUT -->
+    <div class="about">
+        <img src="LogoHMIF.png" class="geser" alt="logo">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-6 lefto">
+                    <div class="container text-white">
+                        <h1>VISI</h1>
+                        Menciptakan Himpunan yang mampu menjadi wadah untuk berekspresi dan berkembang, serta menampung aspirasi bagi anggotanya
+                        <br><br>
+                        <h1>MISI</h1>
+                        <ul>
+                            <li class="text-white">Menfasilitasi anggota untuk berkembang sesuai minat dan bakat dalam bentuk klub-klub belajar.</li>
+                            <li class="text-white">Menciptakan lingkungan kondusif bagi anggota dalam melatih komunikasi dan berekspresi secara bebas.</li>
+                            <li class="text-white">Mampu menampung aspirasi anggota demi kepentingan dan kemajuan himpunan tanpa memandang tingkatan atau jabatan anggotanya.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-6 righto">
+                    <div class="container text-white">
+                        <h1>SEJARAH</h1><br>
+                        Himpunan Mahasiswa Informatika merupakan sebuah wadah berekspresi dan berkembang serta sebagai pengaplikasian baik 
+                        akademik maupun non-akademik bagi seluruh Mahasiswa Informatika. Himpunan Mahasiswa Program Studi Informatika atau 
+                        yang lebih dikenal sebagai HMIF merupakan himpunan terbaru dari Fakultas Teknologi Informasi yang berdiri sejak 
+                        tahun 2023, tepatnya pada hari Selasa, 4 Juli 2023. Pada saat ini, himpunan sudah berjalan selama satu tahun 
+                        kepengurusan dan telah berhasil melaksanakan berbagai program kerja yang mendukung pengembangan kompetensi 
+                        serta kreativitas mahasiswa. Selama periode ini, HMIF telah menjadi katalisator dalam mempererat solidaritas antar 
+                        mahasiswa dan berkontribusi aktif dalam berbagai kegiatan sosial maupun ilmiah di lingkungan kampus.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- TRANSITION -->
+    <div id="Division" class="transition"></div>
+    <!-- DIVISION -->
+    <div class="division">
+        <div class="container">
+            <h2 class="mb-5">DIVISI</h2>
+            <!-- Carousel -->
+            <div id="demo" class="carousel slide" data-bs-ride="carousel">
+
+                <!-- Indicators/dots -->
+                <div class="carousel-indicators">
+                <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+                <button type="button" data-bs-target="#demo" data-bs-slide-to="3"></button>
+                <button type="button" data-bs-target="#demo" data-bs-slide-to="4"></button>
+                <button type="button" data-bs-target="#demo" data-bs-slide-to="5"></button>
+                <button type="button" data-bs-target="#demo" data-bs-slide-to="6"></button>
+                <button type="button" data-bs-target="#demo" data-bs-slide-to="7"></button>
+                </div>
+                
+                <!-- The slideshow/carousel -->
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="DPP.png" alt="divisi" class="mx-auto d-block carol">
+                        <div class="carousel-caption">
+                        <h3>DPP</h3>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="inti.png" alt="divisi" class="mx-auto d-block carol">
+                        <div class="carousel-caption">
+                        <h3>INTI</h3>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="PSDM.png" alt="divisi" class="mx-auto d-block carol">
+                        <div class="carousel-caption">
+                        <h3>HRD</h3>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="unknown.png" alt="divisi" class="mx-auto d-block carol">
+                        <div class="carousel-caption">
+                        <h3>INTERNAL</h3>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="unknown.png" alt="divisi" class="mx-auto d-block carol">
+                        <div class="carousel-caption">
+                        <h3>EKSTERNAL</h3>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="Entrepreneur.png" alt="divisi" class="mx-auto d-block carol">
+                        <div class="carousel-caption">
+                        <h3>ENTERENEUR</h3>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="PR.png" alt="divisi" class="mx-auto d-block carol">
+                        <div class="carousel-caption">
+                        <h3>ADKESMA</h3>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="Infomed.png" alt="divisi" class="mx-auto d-block carol">
+                        <div class="carousel-caption">
+                        <h3>INFOMED</h3>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Left and right controls/icons -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev"><i class="fa-solid fa-arrow-left"></i></button>
+                <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next"><i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- TRANSITION -->
+    <div id="Gallery" class="transition"></div>
+    <!-- GALLERY -->
+    <div class="gallery">
+        <div class="container">
+            <h2 class="mb-2">Galeri</h2>
+            <!-- Carousel -->
+            <div id="demo2" class="carousel slide" data-bs-ride="carousel">
+
+                <!-- Indicators/dots -->
+                <div class="carousel-indicators">
+                <button type="button" data-bs-target="#demo2" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#demo2" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#demo2" data-bs-slide-to="2"></button>
+                <button type="button" data-bs-target="#demo2" data-bs-slide-to="3"></button>
+                <button type="button" data-bs-target="#demo2" data-bs-slide-to="4"></button>
+                <button type="button" data-bs-target="#demo2" data-bs-slide-to="5"></button>
+                <button type="button" data-bs-target="#demo2" data-bs-slide-to="6"></button>
+                <button type="button" data-bs-target="#demo2" data-bs-slide-to="7"></button>
+                <button type="button" data-bs-target="#demo2" data-bs-slide-to="8"></button>
+                <button type="button" data-bs-target="#demo2" data-bs-slide-to="9"></button>
+                </div>
+                
+                <!-- The slideshow/carousel -->
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="ka&wahim23.png" alt="divisi" class="mx-auto d-block carol2 rounded">
+                        <div class="carousel-caption">
+                        <h3>KETUA DAN WAKIL</h3>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="sekretaris23.png" alt="divisi" class="mx-auto d-block carol2 rounded">
+                        <div class="carousel-caption">
+                        <h3>Sekretaris</h3>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="bendahara23.png" alt="divisi" class="mx-auto d-block carol2 rounded">
+                        <div class="carousel-caption">
+                        <h3>BENDAHARA</h3>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="dpp23.png" alt="divisi" class="mx-auto d-block carol2 rounded">
+                        <div class="carousel-caption">
+                        <h3>DPP</h3>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="hrd23.png" alt="divisi" class="mx-auto d-block carol2 rounded">
+                        <div class="carousel-caption">
+                        <h3>HRD</h3>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="adkesma23.png" alt="divisi" class="mx-auto d-block carol2 rounded">
+                        <div class="carousel-caption">
+                        <h3>ADKESMA</h3>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="entrepeneur23.png" alt="divisi" class="mx-auto d-block carol2 rounded">
+                        <div class="carousel-caption">
+                        <h3>ENTERENEUR</h3>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="internal23.png" alt="divisi" class="mx-auto d-block carol2 rounded">
+                        <div class="carousel-caption">
+                        <h3>INTERNAL</h3>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="eksternal23.png" alt="divisi" class="mx-auto d-block carol2 rounded">
+                        <div class="carousel-caption">
+                        <h3>EKSTERNAL</h3>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="infomed23.png" alt="divisi" class="mx-auto d-block carol2 rounded">
+                        <div class="carousel-caption">
+                        <h3>INFOMED</h3>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Left and right controls/icons -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#demo2" data-bs-slide="prev"><i class="fa-solid fa-arrow-left"></i></button>
+                <button class="carousel-control-next" type="button" data-bs-target="#demo2" data-bs-slide="next"><i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- TRANSITION -->
+    <div id="Contact" class="transition"></div>
+    <!-- CONTACT -->
+    <div class="contact">
+        <div class="container">
+            <div class="row">
+                <div class="container">
+                    <div class="forum">
+                        <h4>Contact Us</h4>
+                        <div class="container">
+                            <form id="myForm">
+                                <div class="mb-3 mt-3">
+                                <label for="email" class="form-label putih">Email:</label>
+                                <input type="email" class="form-control" id="email" placeholder="johndoe@gmail.com" name="email">
+                                </div>
+                                <div class="mb-3">
+                                <label for="pwd" class="form-label putih">Password:</label>
+                                <input type="password" class="form-control" id="pwd" placeholder="12345678" name="pswd">
+                                </div>
+                                <div class="form-check mb-3">
+                                <label for="comment" class="putih mb-2" style="margin-left: -5px;">Comments:</label>
+                                    <textarea class="form-control" rows="5" id="comment" name="text"></textarea>
+                                </div>
+                                <a href="#Contact"><button type="submit" id="submit" class="btn btn-primary">Submit</button></a>
+                                
+                            </form>
+                            <div class="container mt-4">
+                                <ul>
+                                    <li>
+                                        <i class="fas fa-envelope" style="color:white;"></i>
+                                        <a href="mailto:HMIF@gmail.com" class="linktr putih">HMIF@gmail.com</a>
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-phone" style="color: #4CE25B;"></i>
+                                        <a href="tel:+62 851 6000 1122" class="linktr putih">WhatsApp</a>
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-map-marker-alt" style="color: #E70000;"></i>
+                                        <a href="https://www.google.com/maps/place/Fakultas+Teknologi+InformasiUniversitas+Andalas/@-0.9153508,100.4610533,15z/data=!4m6!3m5!1s0x2fd4b7963e1ea631:0x452d09b61f76d6ec!8m2!3d-0.9153508!4d100.4610533!16s%2Fg%2F125n3w9p3?entry=ttu" 
+                                        target="_blank" class="linktr putih">Limau Manis, Pauh, Limau Manis, Kec. Pauh, Kota Padang, Sumatera Barat 25163</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="copyright-section">
+        Copyright &copy; <b>Web HMIF.</b> All Rights Reserved.
+        <p>Designed and developed by [Kevin Andhika '2005']</p>
+    </div>
+</body>
+<script src="bootstrap.bundle.min.js"></script>
+<script src="https://kit.fontawesome.com/fa6455ea3c.js" crossorigin="anonymous"></script>
+</html>
